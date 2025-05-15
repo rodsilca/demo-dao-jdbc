@@ -12,7 +12,7 @@ public class Program {
 
         LocalDate date = LocalDate.parse("2000-01-25");
         Seller seller = new Seller(1,"Maria","maria@gmail.com", date,3000.0,obj);
-        
+
         System.out.println(seller);
     }
 }
