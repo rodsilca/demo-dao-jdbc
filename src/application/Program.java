@@ -2,6 +2,7 @@ package application;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
+import model.dao.impl.SellerDaoJDBC;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -25,6 +26,10 @@ public class Program {
         list = sellerDao.findAll();
         list.forEach(System.out::println);
 
+        System.out.println("=== teste 4: sellerInsert====");
+        Seller newSeller = new Seller(null,"Greg","greg@gmail.com",new Date(),4000.0,department);
+        sellerDao.insert(newSeller);
+        System.out.println("Inserted! new Id: "+newSeller.getId());
 
     }
 }
